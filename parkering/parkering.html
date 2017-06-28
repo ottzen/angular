@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ajaxApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Ajax</title>
+	<script src="node_modules/angular/angular.min.js"></script>
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+</head>
+<body ng-controller="ajaxCtrl">
+	<div class="container">
+		<h4>Leder du efter en P plads i Aarhus</h4>
+		<p><button class="btn btn-success" ng-click="loadData()">Find parkeringsplads</button></p>
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<table class="table table-striped table-bordered">
+					<thead>
+						<tr>
+							<th>Parkeringshus</th>
+							<th>Ledige pladser</th>
+							
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-hide="items.length">
+							<td colspan="3" class="text-center">No data</td>
+						</tr>
+						<tr ng-repeat="item in items">
+							<td>{{item.garageCode}}</td>
+							<td>{{item.totalSpaces - item.vehicleCount}}</td>
+						</tr>
+					</tbody>
+				</table>
+				
+			</div>
+		</div>	
+	</div>
+	<script src="controller/AjaxController.js"></script>
+</body>
+</html>
