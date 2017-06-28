@@ -1,0 +1,15 @@
+{
+  "name": "parkeringv2",
+  "version": "1.0.0",
+  "description": "Parking app with structured services and controller",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kasper ottzen",
+  "license": "ISC",
+  "dependencies": {
+    "angularjs": "0.0.1",
+    "bootstrap": "^3.3.7"
+  }
+}
